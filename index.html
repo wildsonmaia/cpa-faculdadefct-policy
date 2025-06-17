@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Faculdade FCT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        
+        .update-date {
+            color: #6c757d;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin: 25px 0 15px;
+            font-size: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .contact {
+            background-color: #e9f7fe;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        .lang-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .lang-toggle:hover {
+            background: #1a252f;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .lang-toggle {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="langToggle" class="lang-toggle">Traduzir para o inglês</button>
+        <div id="content"></div>
+    </div>
+
+    <script>
+        const content = {
+            pt: {
+                title: "Política de Privacidade",
+                updateDate: "Última atualização: 18 de junho de 2025",
+                sections: [
+                    {
+                        heading: "1. Coleta de Dados",
+                        text: "Nosso aplicativo não coleta dados pessoais dos usuários (como nome, e-mail, CPF, etc.)."
+                    },
+                    {
+                        heading: "2. Armazenamento de Dados",
+                        text: "Todos os dados exibidos no aplicativo (indicadores de avaliação, membros da CPA, informações institucionais) são armazenados exclusivamente em bancos de dados gerenciados pela Faculdade FCT. Nenhum dado é mantido localmente no dispositivo do usuário."
+                    },
+                    {
+                        heading: "3. Acesso à Internet",
+                        text: "O aplicativo requer conexão à internet para acessar dados atualizados dos indicadores institucionais, membros da CPA e funcionalidades interativas."
+                    },
+                    {
+                        heading: "4. Compartilhamento de Dados",
+                        text: "Os dados institucionais disponibilizados (indicadores, composição da CPA) são de acesso público e não são compartilhados com terceiros."
+                    },
+                    {
+                        heading: "5. Segurança",
+                        text: "A segurança dos dados institucionais é garantida por:",
+                        list: [
+                            "Protocolos de criptografia nas comunicações entre o aplicativo e o servidor.",
+                            "Controle de acesso restrito aos bancos de dados da CPA.",
+                            "Monitoramento contínuo contra ameaças digitais."
+                        ]
+                    },
+                    {
+                        heading: "6. Alterações nesta Política",
+                        text: "Esta política pode ser atualizada periodicamente. Mudanças significativas serão comunicadas através do próprio aplicativo ou do site institucional."
+                    },
+                    {
+                        heading: "7. Contato",
+                        text: "Para dúvidas sobre privacidade ou tratamento de dados, entre em contato com a CPA da Faculdade FCT:",
+                        contact: "E-mail: cpa@faculdadefct.edu.br"
+                    }
+                ]
+            },
+            en: {
+                title: "Privacy Policy",
+                updateDate: "Last updated: June 18, 2025",
+                sections: [
+                    {
+                        heading: "1. Data Collection",
+                        text: "Our app does not collect personal user data (such as name, email, CPF, etc.)."
+                    },
+                    {
+                        heading: "2. Data Storage",
+                        text: "All data displayed in the app (evaluation indicators, CPA members, institutional information) is stored exclusively in databases managed by FCT College. No data is retained locally on the user's device."
+                    },
+                    {
+                        heading: "3. Internet Access",
+                        text: "The app requires an internet connection to access updated institutional indicators, CPA members, and interactive features."
+                    },
+                    {
+                        heading: "4. Data Sharing",
+                        text: "Publicly available institutional data (indicators, CPA composition) is not shared with third parties."
+                    },
+                    {
+                        heading: "5. Security",
+                        text: "Institutional data security is ensured through:",
+                        list: [
+                            "Encryption protocols for app-server communications.",
+                            "Restricted access controls to CPA databases.",
+                            "Continuous monitoring against digital threats."
+                        ]
+                    },
+                    {
+                        heading: "6. Policy Changes",
+                        text: "This policy may be updated periodically. Significant changes will be communicated via the app or the institutional website."
+                    },
+                    {
+                        heading: "7. Contact",
+                        text: "For questions about privacy or data handling, contact the CPA of FCT College:",
+                        contact: "Email: cpa@faculdadefct.edu.br"
+                    }
+                ]
+            }
+        };
+
+        let currentLang = 'pt';
+
+        function renderContent(lang) {
+            const data = content[lang];
+            const container = document.getElementById('content');
+            container.innerHTML = `
+                <header>
+                    <h1>${data.title}</h1>
+                    <div class="update-date">${data.updateDate}</div>
+                </header>
+                ${data.sections.map(section => `
+                    <section>
+                        <h2>${section.heading}</h2>
+                        <p>${section.text}</p>
+                        ${section.list ? `<ul>${section.list.map(item => `<li>${item}</li>`).join('')}</ul>` : ''}
+                        ${section.contact ? `<div class="contact">${section.contact}</div>` : ''}
+                    </section>
+                `).join('')}
+            `;
+        }
+
+        document.getElementById('langToggle').addEventListener('click', function() {
+            currentLang = currentLang === 'pt' ? 'en' : 'pt';
+            renderContent(currentLang);
+            this.textContent = currentLang === 'pt' ? 'Traduzir para o inglês' : 'Versão em Português';
+        });
+
+        // Render initial content
+        renderContent(currentLang);
+    </script>
+</body>
+</html>
